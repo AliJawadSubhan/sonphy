@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sonphy/core/utils/colors.dart';
 import 'package:sonphy/modules/create_recipie/create_recipie.dart';
-import 'package:sonphy/modules/profile/profile_page.dart';
 
 class Sonphy extends StatelessWidget {
   const Sonphy({super.key});
@@ -19,7 +18,7 @@ class Sonphy extends StatelessWidget {
             elevation: 0.0,
             backgroundColor: Colors.white,
           )),
-      home: const ProfilePage(),
+      home: CreateRecipiePage(),
     );
   }
 }
