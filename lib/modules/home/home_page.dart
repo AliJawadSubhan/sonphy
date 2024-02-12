@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    for (int i = 0; i < 5; i++) const RecipieBox(),
+                    for (int i = 0; i < 5; i++) RecipieBox(),
                   ],
                 ),
               ),
@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    for (int i = 0; i < 5; i++) const RecipieBox(),
+                    for (int i = 0; i < 5; i++) RecipieBox(),
                   ],
                 ),
               ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:sonphy/config/extensions/buildcontext_extensions.dart';
-import 'package:sonphy/core/core_widgets/core_text.dart';
 import 'package:sonphy/core/core_widgets/widget_link.dart';
 import 'package:sonphy/core/utils/colors.dart';
+import 'package:sonphy/modules/profile/pages/profile_settings_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -79,7 +79,12 @@ class ProfilePage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               customTextWidget(text: e),
-                              const Icon(EvaIcons.arrow_ios_forward),
+                              GestureDetector(
+                                  onTap: () {
+                                    context.pushScreenTo(ProfileSettingsPage());
+                                  },
+                                  child:
+                                      const Icon(EvaIcons.arrow_ios_forward)),
                             ],
                           ),
                           const Divider(),
@@ -123,4 +128,10 @@ const profileOptions = [
   "Profile Settings",
   "Food Preferences",
   "Your recipie",
+];
+final profilePages = [
+  ProfileSettingsPage(),
+  ProfileSettingsPage(),
+  ProfileSettingsPage(),
+  ProfileSettingsPage(),
 ];
