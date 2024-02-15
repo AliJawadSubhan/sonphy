@@ -4,6 +4,8 @@ import 'package:sonphy/config/constants/fonts_constants.dart';
 import 'package:sonphy/config/extensions/buildcontext_extensions.dart';
 
 import 'package:sonphy/core/core_widgets/widget_link.dart';
+import 'package:sonphy/modules/authentication/forget_password/forget_password.dart';
+import 'package:sonphy/modules/home/home_page.dart';
 
 class SignInPage extends StatelessWidget {
   SignInPage({super.key});
@@ -87,11 +89,14 @@ class SignInPage extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: Align(
                 alignment: Alignment.centerRight,
-                child: customTextWidget(
-                  text: "Forgot Password",
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  fontNameP: FontsConstants.nunito,
+                child: GestureDetector(
+                  onTap: () => context.pushScreenTo(ForgetPasswordPage()),
+                  child: customTextWidget(
+                    text: "Forgot Password",
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    fontNameP: FontsConstants.nunito,
+                  ),
                 ),
               ),
             ),
@@ -104,7 +109,9 @@ class SignInPage extends StatelessWidget {
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
-                func: () {},
+                func: () {
+                  context.PushReplacementScreenTo(const HomePage());
+                },
               ),
             ),
             Spaces.mid,

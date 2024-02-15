@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:sonphy/core/utils/colors.dart';
 
+int currentIndex = 0;
+
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
 
@@ -11,7 +13,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   List<IconData> listOfIcons = [
-    EvaIcons.home,
+    FontAwesome.house_solid,
     EvaIcons.book_open,
     EvaIcons.heart,
     EvaIcons.sync,
@@ -25,8 +27,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
     'Generate',
     'Account',
   ];
-
-  int currentIndex = 0;
 
   List<BottomNavigationBarItem> buildBottomNavBarItems() {
     List<BottomNavigationBarItem> items = [];

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sonphy/config/themes/theme.dart';
 import 'package:sonphy/modules/profile/pages/your_pages.dart';
+import 'package:sonphy/modules/splash/splash_page.dart';
 
 class Sonphy extends StatelessWidget {
   const Sonphy({super.key});
@@ -10,7 +11,7 @@ class Sonphy extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: CustomTheme.theme,
-      home: const YourPages(),
+      home: SplashPage(),
     );
   }
 }

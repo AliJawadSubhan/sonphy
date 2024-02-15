@@ -11,5 +11,6 @@ extension BuildContextExtension on BuildContext {
   void popFromScreen() => Navigator.pop(this);
   // ignore: non_constant_identifier_names
   void PushReplacementScreenTo(Widget page) =>
-      Navigator.pushReplacement(this, MaterialPageRoute(builder: (c) => page));
+      Navigator.of(this).pushReplacement(
+          AnimateRoute(transition: Transition.cupertino, screen: page));
 }

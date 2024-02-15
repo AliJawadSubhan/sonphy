@@ -113,7 +113,9 @@ class ProfilePage extends StatelessWidget {
                     customTextWidget(text: "Log out"),
                   ],
                 ),
-                func: () {},
+                func: () {
+                  context.popFromScreen();
+                },
               ),
             ),
             const Spacer(),

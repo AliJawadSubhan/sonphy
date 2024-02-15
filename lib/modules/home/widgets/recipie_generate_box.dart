@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sonphy/config/extensions/buildcontext_extensions.dart';
 import 'package:sonphy/core/core_widgets/widget_link.dart';
+import 'package:sonphy/modules/generate_recipie/generate_recipie_page.dart';
 
 class RecipieGenerateBox extends StatelessWidget {
   const RecipieGenerateBox({
@@ -77,7 +78,9 @@ class RecipieGenerateBox extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: customElevatedBtnWidget(
-                      func: () {},
+                      func: () {
+                        context.pushScreenTo(GenerateRecipiePage());
+                      },
                       child: customTextWidget(
                           text: "Generate",
                           color: Colors.white,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sonphy/config/constants/fonts_constants.dart';
 import 'package:sonphy/config/extensions/buildcontext_extensions.dart';
 import 'package:sonphy/core/core_widgets/widget_link.dart';
+import 'package:sonphy/modules/home/home_page.dart';
 
 class SignUpPage extends StatelessWidget {
   SignUpPage({super.key});
@@ -106,7 +107,9 @@ class SignUpPage extends StatelessWidget {
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
-                func: () {},
+                func: () {
+                  context.PushReplacementScreenTo(const HomePage());
+                },
               ),
             ),
             Spaces.mid,

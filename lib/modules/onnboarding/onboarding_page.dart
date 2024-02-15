@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:sonphy/config/extensions/buildcontext_extensions.dart';
 import 'package:sonphy/core/core_widgets/widget_link.dart';
 import 'package:sonphy/core/utils/colors.dart';
+import 'package:sonphy/modules/authentication/sign_In/sign_in_page.dart';
+import 'package:sonphy/modules/authentication/sign_up/sign_up_page.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({super.key});
@@ -59,13 +61,16 @@ class OnBoardingPage extends StatelessWidget {
                 children: [
                   Flexible(
                     child: customElevatedBtnWidget(
-                        bgColor: Colors.white,
-                        width: context.screenWidth * 0.5,
-                        child: customTextWidget(
-                          text: "Log In",
-                          // color: Colors.white,
-                        ),
-                        func: () {}),
+                      bgColor: Colors.white,
+                      width: context.screenWidth * 0.5,
+                      child: customTextWidget(
+                        text: "Log In",
+                        // color: Colors.white,
+                      ),
+                      func: () {
+                        context.pushScreenTo(SignInPage());
+                      },
+                    ),
                   ),
                   Spaces.smallw,
                   Flexible(
@@ -75,7 +80,9 @@ class OnBoardingPage extends StatelessWidget {
                           text: "Sign Up",
                           color: Colors.white,
                         ),
-                        func: () {}),
+                        func: () {
+                          context.pushScreenTo(SignUpPage());
+                        }),
                   ),
                 ],
               ),

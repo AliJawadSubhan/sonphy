@@ -67,7 +67,7 @@ class YourPages extends StatelessWidget {
                         SlidableAction(
                           flex: 2,
                           onPressed: (BuildContext context) {},
-                          backgroundColor: Color(0xFF7BC043),
+                          backgroundColor: const Color(0xFF7BC043),
                           foregroundColor: Colors.white,
                           icon: Icons.archive,
                           label: 'Archive',
@@ -89,6 +89,7 @@ class YourPages extends StatelessWidget {
                 ],
               ),
             ),
+            Spaces.smallh,
             Slidable(
               key: const ValueKey(1),
               endActionPane: ActionPane(

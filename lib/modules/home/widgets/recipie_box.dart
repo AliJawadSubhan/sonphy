@@ -3,6 +3,7 @@ import 'package:sonphy/config/extensions/buildcontext_extensions.dart';
 import 'package:sonphy/core/core_widgets/core_text.dart';
 import 'package:sonphy/core/core_widgets/spaces.dart';
 
+// ignore: must_be_immutable
 class RecipieBox extends StatelessWidget {
   RecipieBox({
     super.key,
